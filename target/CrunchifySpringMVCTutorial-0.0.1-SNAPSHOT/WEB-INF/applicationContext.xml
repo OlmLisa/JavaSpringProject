@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="user" class="com.ecole.Utilisateur">
+        <constructor-arg value="test" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <bean id="e" class="com.ecole.Enseignant">
+        <constructor-arg value="test2" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test2" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test2" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test2" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <bean id="el" class="com.ecole.Eleve">
+        <constructor-arg value="test3" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test3" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test3" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test3" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <bean id="p" class="com.ecole.Parent">
+        <constructor-arg value="test4" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test4" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test4" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test4" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test4" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="test4" type="java.lang.String"></constructor-arg>
+     </bean>
+
+    <bean id="f" class="com.ecole.Fichier">
+        <constructor-arg value="1" type="int"></constructor-arg>
+        <constructor-arg value="testFichier" type="java.lang.String"></constructor-arg>
+   </bean>
+
+    <bean id="classe" class="com.ecole.Classe">
+        <constructor-arg value="testClasse" type="java.lang.String"></constructor-arg>
+   </bean>
+
+    <bean id="m" class="com.ecole.Mot">
+        <constructor-arg value="testFichier" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <!-- la classe d'accès aux données -->
+    <bean id="utilisateurDAO" class="com.dao.UtilisateurDAO">
+        <constructor-arg value="jdbc:mysql://localhost/jdbc?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <!-- la classe d'accès aux données -->
+    <bean id="enseignantDAO" class="com.dao.EnseignantDAO">
+        <constructor-arg value="jdbc:mysql://localhost/jdbc?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <!-- la classe d'accès aux données -->
+    <bean id="classeDAO" class="com.dao.ClasseDAO">
+        <constructor-arg value="jdbc:mysql://localhost/jdbc?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+    </bean>
+    <!-- la classe d'accès aux données -->
+    <bean id="fichierDAO" class="com.dao.FichierDAO">
+        <constructor-arg value="jdbc:mysql://localhost/jdbc?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <!-- la classe d'accès aux données -->
+    <bean id="parentDAO" class="com.dao.ParentDAO">
+        <constructor-arg value="jdbc:mysql://localhost/jdbc?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <!-- la classe d'accès aux données -->
+    <bean id="eleveDAO" class="com.dao.EleveDAO">
+        <constructor-arg value="jdbc:mysql://localhost/jdbc?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <!-- la classe d'accès aux données -->
+    <bean id="devoirDAO" class="com.dao.DevoirDAO">
+        <constructor-arg value="jdbc:mysql://localhost/jdbc?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="root" type="java.lang.String"></constructor-arg>
+    </bean>
+
+    <!-- la classe d'accès aux données -->
+    <bean id="devoir" class="com.ecole.Devoir">
+        <constructor-arg value="devoir" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="date_devoir" type="java.lang.String"></constructor-arg>
+    </bean>
+
+
+</beans>
