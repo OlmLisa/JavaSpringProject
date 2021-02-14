@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Connexion Enseignant</title>
+</head>
+<body>
+<h1>Enseignant login</h1>
+<form action="#" th:action="@{/EnseignantLogin}" th:object="${Enseignant}" method="post">
+    <p>login: <input type="text" th:field="*{user}" /></p>
+    <p>password: <input type="text" th:field="*{passwd}" /></p>
+    <p><input type="submit" value="Submit" /></p>
+</body>
+</html>
